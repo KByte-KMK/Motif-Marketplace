@@ -1,0 +1,84 @@
+/* Base Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf6;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Headings Section */
+#headings h1 {
+  color: #4e342e;
+  font-size: 2.2rem;
+  margin-top: 10px;
+}
+
+/* Product Image */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Price Display */
+h2 {
+  color: #6a1b9a;
+  font-size: 1.5rem;
+}
+
+/* Buttons Section */
+#add\ to\ cart\ or\ buy {
+  margin-top: 20px;
+}
+
+#add\ to\ cart\ or\ buy button {
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#add\ to\ cart\ or\ buy button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+/* About Product */
+#about\ product {
+  margin-top: 30px;
+}
+
+#about\ product h2 {
+  color: #00897b;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #26a69a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  #headings h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #add\ to\ cart\ or\ buy button {
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+  }
+}
