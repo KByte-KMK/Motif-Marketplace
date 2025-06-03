@@ -1,72 +1,92 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fffaf0;
-  color: #333;
   margin: 0;
-  padding: 0;
-}
-
-header {
-  padding: 20px;
-  background-color: #f9e4d4;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
   text-align: center;
-  border-bottom: 2px solid #e0cbb3;
 }
 
 h1 {
-  margin: 10px 0;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #37474f;
 }
 
-.center {
-  text-align: center;
-  margin: 30px auto;
+section#Categories {
+  margin: 20px auto;
+  padding: 10px 0;
+  background-color: #e3f2fd;
+  border-top: 2px solid #64b5f6;
+  border-bottom: 2px solid #64b5f6;
 }
 
-#cart-items button {
-  background-color: #ff7043;
+#Categories button {
+  background-color: #42a5f5;
   color: white;
   border: none;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  width: 220px;
+  padding: 12px 20px;
+  margin: 10px 5px;
+  border-radius: 10px;
   font-size: 1rem;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
-#cart-items button:hover {
-  background-color: #e64a19;
+#Categories button:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
 }
 
-#cart-items img {
+#Categories img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+a button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+a img {
   width: 100%;
+  max-width: 230px;
   height: auto;
-  border-radius: 6px;
+  border-radius: 10px;
   margin-bottom: 10px;
-  max-height: 180px;
   object-fit: cover;
 }
 
-#cart-items a {
-  display: inline-block;
-  text-decoration: none;
-}
+@media (max-width: 768px) {
+  #Categories button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+  }
 
-.buy-all {
-  background-color: #4caf50;
-}
-
-.buy-all:hover {
-  background-color: #388e3c;
-}
-
-@media (max-width: 600px) {
-  #cart-items button {
+  a button {
     width: 90%;
   }
 
-  #cart-items img {
-    max-height: 140px;
+  a img {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
   }
 }
