@@ -1,4 +1,4 @@
-section#Categories {
+section#add to cart or buy {
   margin: 20px 0;
   padding: 10px 0;
   background-color: #ffe0b2;
@@ -6,7 +6,7 @@ section#Categories {
   border-bottom: 2px solid #ffb74d;
 }
 
-#Categories button {
+#add to cart or buy button {
   background-color: #ff7043;
   color: white;
   border: none;
@@ -18,7 +18,7 @@ section#Categories {
   cursor: pointer;
 }
 
-#Categories button:hover {
+#add to cart or buy button:hover {
   background-color: #e64a19;
   transform: scale(1.05);
 }
