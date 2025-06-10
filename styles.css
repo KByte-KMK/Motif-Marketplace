@@ -1,67 +1,61 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ece0c8;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  padding: 20px;
-  background-color: #f4e4d2;
+/* Hero Banner Section */
+#hero-banner {
+  position: relative;
+  padding: 60px 20px 30px;
+  background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+  overflow: hidden;
   text-align: center;
-  border-bottom: 2px solid #e0cbb3;
+  border-bottom: 4px dashed #d84315;
+  animation: fadeSlideDown 1s ease-in-out both;
 }
 
-h1, h3 {
-  margin: 10px 0;
-}
-
-.center {
-  text-align: center;
-  margin: 30px auto;
-}
-
-#Categories button,
-#Products button {
-  background-color: #ff7043;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  width: 220px;
-  font-size: 1rem;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-#Categories button:hover,
-#Products button:hover {
-  background-color: #e64a19;
-}
-
-#Products img {
+/* SVG Embroidery Text */
+.stitched-heading {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  max-height: 180px;
-  object-fit: cover;
+  height: 100px;
 }
 
-#Products a {
-  display: inline-block;
-  text-decoration: none;
+.stitched-heading text {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 36px;
+  fill: none;
+  stroke: #d84315;
+  stroke-width: 1;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: stitch 3s ease forwards;
 }
 
-@media (max-width: 600px) {
-  #Categories button,
-  #Products button {
-    width: 90%;
+/* Subheading text */
+.subtext {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #5d4037;
+  opacity: 0;
+  animation: fadeIn 2s ease 2s forwards;
+}
+
+/* Keyframes for stitch effect */
+@keyframes stitch {
+  to {
+    stroke-dashoffset: 0;
   }
+}
 
-  #Products img {
-    max-height: 140px;
+/* Keyframes for fade and slide */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
