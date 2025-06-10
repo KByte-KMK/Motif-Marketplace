@@ -16,12 +16,9 @@ h1 {
   animation: fadeDown 0.6s ease;
 }
 
-/* Navigation Section */
-section#Categories {
-  background-color: #ffe0b2;
-  padding: 15px 0;
-  border-top: 2px solid #ffb74d;
-  border-bottom: 2px solid #ffb74d;
+/* Category Buttons (No box, just spacing and animation) */
+#Categories {
+  margin: 25px 0;
   animation: fadeUp 0.6s ease;
 }
 
@@ -41,13 +38,6 @@ section#Categories {
 #Categories button:hover {
   background-color: #e64a19;
   transform: scale(1.05);
-}
-
-#Categories img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 5px;
 }
 
 /* Product Buttons */
@@ -101,7 +91,7 @@ a img:hover {
   to { opacity: 1; }
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   #Categories button {
     display: block;
