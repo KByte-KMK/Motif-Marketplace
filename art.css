@@ -1,12 +1,31 @@
-/* Base Reset and Body Styling */
+/* Reset and Base Styling */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f3ede8;
-  color: #333;
+  background-color: #fff4e6;
+  color: #2e1a0f;
   text-align: center;
   animation: fadeInBody 1s ease-in-out;
+}
+
+/* Marketplace Breadcrumb Header */
+.top-bar {
+  background-color: #ff7043;
+  color: white;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+h1 {
+  margin-top: 20px;
+  font-size: 2.2rem;
+  color: #d84315;
+  animation: slideDown 0.6s ease-out;
 }
 
 /* Fade-in animation */
@@ -15,76 +34,61 @@ body {
   to { opacity: 1; }
 }
 
-/* Marketplace Path Header */
-.top-bar {
-  background-color: #a1887f;
-  color: white;
-  padding: 10px 0;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-
-/* Product Title */
-h1 {
-  margin-top: 20px;
-  font-size: 2rem;
-  color: #6d4c41;
-  animation: slideDown 0.6s ease-out;
-}
-
-/* Slide-down animation for headings */
+/* Slide-down heading animation */
 @keyframes slideDown {
   from { transform: translateY(-30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Product Image */
+/* Product Image Styling */
 img {
-  height: 300px;
+  height: 320px;
   max-width: 90%;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-top: 20px;
-  transition: transform 0.3s ease;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  margin-top: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-/* Price Styling */
+/* Product Price */
 h2 {
-  font-size: 1.2rem;
-  color: #4e342e;
+  font-size: 1.3rem;
+  color: #6d4c41;
   margin: 20px 0 10px 0;
 }
 
 /* Buttons */
 button {
-  background-color: #d7a86e;
+  background-color: #ff8f00;
   color: white;
   border: none;
   padding: 14px 24px;
   margin: 15px 8px;
   border-radius: 10px;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #b97b4d;
-  transform: scale(1.05);
+  background-color: #ef6c00;
+  transform: scale(1.06);
 }
 
-/* About Section */
+/* About Section Styling */
 #about\ product h2 {
-  color: #5d4037;
+  color: #bf360c;
   margin-top: 30px;
 }
 
-/* Responsive Layout */
+/* Responsive Design */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.6rem;
