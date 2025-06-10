@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ece0c8;
+  background-color: #f9f5f0;
   color: #333;
   text-align: center;
 }
@@ -11,68 +11,101 @@ body {
 /* Header Styling */
 h1 {
   margin-top: 20px;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #4e342e;
+  animation: fadeInDown 0.8s ease;
 }
 
+/* Category Buttons - Cleaned */
 section#Categories {
-  margin: 20px 0;
-  padding: 10px 0;
-  background-color: #ffe0b2;
-  border-top: 2px solid #ffb74d;
-  border-bottom: 2px solid #ffb74d;
+  margin: 30px 0;
+  padding: 0;
+  background: none;
+  border: none;
 }
 
+/* Category Button Styling */
 #Categories button {
-  background-color: #ff7043;
-  color: white;
-  border: none;
+  background-color: transparent;
+  color: #ff7043;
+  border: 2px solid #ff7043;
   padding: 12px 20px;
   margin: 10px 8px;
-  border-radius: 10px;
+  border-radius: 30px;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
   cursor: pointer;
+  transition: all 0.4s ease;
+  animation: fadeInUp 1s ease;
 }
 
 #Categories button:hover {
-  background-color: #e64a19;
-  transform: scale(1.05);
-}
-
-#Categories img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-/* Product Button Styling */
-a button {
-  background-color: #f06292;
+  background-color: #ff7043;
   color: white;
-  border: none;
-  border-radius: 12px;
+  transform: scale(1.1);
+}
+
+/* Category Icons */
+#Categories img {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Product Buttons */
+a button {
+  background-color: transparent;
+  color: #f06292;
+  border: 2px solid #f06292;
+  border-radius: 30px;
   padding: 15px;
   margin: 20px;
   font-size: 1rem;
   cursor: pointer;
   width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s ease;
+  font-weight: bold;
+  animation: fadeInUp 1.2s ease;
 }
 
 a button:hover {
-  transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: #f06292;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Product Images */
 a img {
   width: 100%;
   max-width: 230px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 14px;
   margin-bottom: 10px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+  animation: fadeIn 1s ease;
+}
+
+a img:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Design */
@@ -92,6 +125,6 @@ a img {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
