@@ -1,25 +1,50 @@
+/* General Reset and Styling */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ece0c8;
+  background-color: #f5f1ea; /* paper tone */
   color: #333;
   text-align: center;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* subtle paper texture */
+  animation: fadeInBody 1s ease;
 }
 
+/* Fade-in animation */
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Page Title */
 h1 {
   margin-top: 20px;
   font-size: 2rem;
   color: #37474f;
+  animation: slideDown 0.6s ease-out;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Category Section */
 section#Categories {
   margin: 20px auto;
   padding: 10px 0;
   background-color: #e3f2fd;
   border-top: 2px solid #64b5f6;
   border-bottom: 2px solid #64b5f6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Category Buttons */
 #Categories button {
   background-color: #42a5f5;
   color: white;
@@ -30,6 +55,7 @@ section#Categories {
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 #Categories button:hover {
@@ -44,6 +70,7 @@ section#Categories {
   margin-right: 5px;
 }
 
+/* Product Cards */
 a button {
   background-color: #1e88e5;
   color: white;
@@ -55,13 +82,28 @@ a button {
   cursor: pointer;
   width: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: popIn 0.8s ease-in-out;
 }
 
 a button:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
+/* Pop-in animation for cards */
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Product Images */
 a img {
   width: 100%;
   max-width: 230px;
@@ -69,8 +111,10 @@ a img {
   border-radius: 10px;
   margin-bottom: 10px;
   object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   #Categories button {
     display: block;
