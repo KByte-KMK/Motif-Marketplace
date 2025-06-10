@@ -6,13 +6,14 @@ body {
   background-color: #ece0c8;
   color: #333;
   text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Header Styling */
 h1 {
   margin-top: 20px;
   font-size: 2rem;
   color: #5d4037;
+  animation: fadeDown 0.6s ease;
 }
 
 /* Navigation Section */
@@ -21,6 +22,7 @@ section#Categories {
   padding: 15px 0;
   border-top: 2px solid #ffb74d;
   border-bottom: 2px solid #ffb74d;
+  animation: fadeUp 0.6s ease;
 }
 
 #Categories button {
@@ -31,8 +33,9 @@ section#Categories {
   margin: 10px 8px;
   border-radius: 10px;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeUp 0.7s ease;
 }
 
 #Categories button:hover {
@@ -59,11 +62,12 @@ a button {
   cursor: pointer;
   width: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 0.8s ease;
 }
 
 a button:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 a img {
@@ -73,9 +77,31 @@ a img {
   border-radius: 10px;
   margin-bottom: 10px;
   object-fit: cover;
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive Behavior */
+a img:hover {
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   #Categories button {
     display: block;
