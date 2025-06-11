@@ -1,66 +1,38 @@
-/* Global Styles */
+/* Base & Reset Styles */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fffaf2;
+  background-color: #ece0c8;
   color: #333;
-  animation: fadeInBody 1s ease-in;
-}
-
-h1, h3 {
-  margin: 10px 0;
   text-align: center;
-  color: #4e342e;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Logo Styling */
-h1 img {
-  display: block;
-  margin: 0 auto;
+h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #5d4037;
+  animation: fadeDown 0.6s ease;
 }
 
-/* Menu Button */
-.menu-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.menu-btn button {
-  background-color: #ff7043;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 16px 28px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.menu-btn button:hover {
-  background-color: #e64a19;
-  transform: scale(1.05);
-}
-
-/* Categories Section — no borders, keep bg color */
+/* Category Buttons (No box, just spacing and animation) */
 #Categories {
-  margin: 30px auto;
-  padding: 30px 20px;
-  background-color: #fff3e0;
-  animation: fadeInUp 1.3s ease;
+  margin: 25px 0;
+  animation: fadeUp 0.6s ease;
 }
 
-/* Category Buttons — larger */
 #Categories button {
   background-color: #ff7043;
   color: white;
   border: none;
-  padding: 20px 36px;
-  margin: 18px;
-  border-radius: 12px;
-  font-size: 1.2rem;
+  padding: 12px 20px;
+  margin: 10px 8px;
+  border-radius: 10px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeUp 0.7s ease;
 }
 
 #Categories button:hover {
@@ -68,76 +40,77 @@ h1 img {
   transform: scale(1.05);
 }
 
-/* Product Section — no borders, keep bg color */
-#Products {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #fff3e0;
-  animation: fadeInUp 1.6s ease;
-}
-
-/* Product Buttons — larger */
-#Products button {
-  background-color: #f57c00;
+/* Product Buttons — Bigger */
+a button {
+  background-color: #8eacbb;
   color: white;
   border: none;
-  border-radius: 14px;
-  margin: 30px auto;
-  padding: 22px;
-  width: 300px;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-#Products button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-#Products img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
   border-radius: 12px;
-  margin-bottom: 10px;
+  padding: 22px;
+  margin: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 0.8s ease;
+}
+
+a button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Images — Bigger */
+a img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
   object-fit: cover;
+  animation: fadeIn 1s ease;
   transition: transform 0.3s ease;
 }
 
-#Products img:hover {
-  transform: scale(1.02);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .menu-btn {
-    position: static;
-    text-align: left;
-    margin: 10px;
-  }
-
-  #Categories button,
-  #Products button {
-    width: 95%;
-    font-size: 1.3rem;
-    padding: 24px;
-  }
-
-  #Products img {
-    max-width: 95%;
-  }
+a img:hover {
+  transform: scale(1.03);
 }
 
 /* Animations */
-@keyframes fadeInBody {
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes fadeInUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  #Categories button {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+  }
 
-  
+  a button {
+    width: 90%;
+    font-size: 1.3rem;
+    padding: 24px;
+  }
+
+  a img {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
