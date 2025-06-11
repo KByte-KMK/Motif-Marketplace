@@ -30,9 +30,9 @@ h1 img {
   background-color: #ff7043;
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 12px 22px;
-  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 16px 28px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -42,25 +42,23 @@ h1 img {
   transform: scale(1.05);
 }
 
-/* Categories Section — restored box style */
+/* Categories Section — no borders, keep bg color */
 #Categories {
   margin: 30px auto;
-  padding: 20px;
+  padding: 30px 20px;
   background-color: #fff3e0;
-  border-top: 2px solid #ffb74d;
-  border-bottom: 2px solid #ffb74d;
   animation: fadeInUp 1.3s ease;
 }
 
-/* Category Buttons — bigger size */
+/* Category Buttons — larger */
 #Categories button {
   background-color: #ff7043;
   color: white;
   border: none;
-  padding: 16px 28px;
-  margin: 15px;
-  border-radius: 10px;
-  font-size: 1.1rem;
+  padding: 20px 36px;
+  margin: 18px;
+  border-radius: 12px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -70,26 +68,24 @@ h1 img {
   transform: scale(1.05);
 }
 
-/* Product Section — restored box style */
+/* Product Section — no borders, keep bg color */
 #Products {
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
   background-color: #fff3e0;
-  border-top: 2px solid #ffb74d;
-  border-bottom: 2px solid #ffb74d;
   animation: fadeInUp 1.6s ease;
 }
 
-/* Product Buttons — bigger size */
+/* Product Buttons — larger */
 #Products button {
   background-color: #f57c00;
   color: white;
   border: none;
-  border-radius: 12px;
-  margin: 25px auto;
-  padding: 18px;
-  width: 280px;
-  font-size: 1.1rem;
+  border-radius: 14px;
+  margin: 30px auto;
+  padding: 22px;
+  width: 300px;
+  font-size: 1.2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -101,9 +97,9 @@ h1 img {
 
 #Products img {
   width: 100%;
-  max-width: 240px;
+  max-width: 260px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 10px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -124,8 +120,8 @@ h1 img {
   #Categories button,
   #Products button {
     width: 95%;
-    font-size: 1.2rem;
-    padding: 18px;
+    font-size: 1.3rem;
+    padding: 24px;
   }
 
   #Products img {
@@ -143,3 +139,5 @@ h1 img {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+  
