@@ -27,19 +27,19 @@ h1 img {
 }
 
 .menu-btn button {
-  background-color: #ff7043;
-  color: white;
+  background: none;
+  color: #ff7043;
   border: none;
-  border-radius: 6px;
   padding: 10px 18px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .menu-btn button:hover {
-  background-color: #e64a19;
+  color: #e64a19;
   transform: scale(1.05);
+  text-decoration: underline;
 }
 
 /* Categories Section */
@@ -53,20 +53,20 @@ h1 img {
 }
 
 #Categories button {
-  background-color: #ff7043;
-  color: white;
+  background: none;
+  color: #ff7043;
   border: none;
   padding: 12px 20px;
   margin: 10px;
-  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #Categories button:hover {
-  background-color: #e64a19;
+  color: #e64a19;
   transform: scale(1.05);
+  text-decoration: underline;
 }
 
 /* Product Section */
@@ -77,31 +77,31 @@ h1 img {
 }
 
 #Products button {
-  background-color: #f57c00;
-  color: white;
+  background: none;
+  color: inherit;
   border: none;
-  border-radius: 10px;
   margin: 20px auto;
-  padding: 15px;
-  width: 260px;
+  padding: 0;
+  width: auto;
   font-size: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: inline-block;
 }
 
 #Products button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
 }
 
 #Products img {
   width: 100%;
   max-width: 220px;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 8px;
 }
 
 #Products img:hover {
