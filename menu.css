@@ -1,74 +1,15 @@
-/* Reset & Base Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdf9f9;
-  color: #333;
-  text-align: center;
-}
-
-/* Header Styling */
-h1 {
-  margin-top: 20px;
-  font-size: 2rem;
-  color: #4e342e;
-}
-
-/* Category Section Container */
-section#Categories {
-  margin: 20px 0;
-  padding: 10px 0;
-  background-color: #ffe0b2;
-  border-top: 2px solid #ffb74d;
-  border-bottom: 2px solid #ffb74d;
-}
-
-/* Individual Category Buttons */
-#Categories button {
-  color: white;
-  border: none;
-  padding: 14px 24px;
-  margin: 12px 10px;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+button {
+  border: 2px solid orange;
+  background-color: transparent;
+  color: orange;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px; /* optional rounded corners */
 }
 
-/* Different colors per category */
-.tops        { background-color: #ff7043; }
-.bottoms     { background-color: #ba68c8; }
-.shoes       { background-color: #42a5f5; }
-.bags        { background-color: #26a69a; }
-.hats        { background-color: #ef5350; }
-.paintings   { background-color: #fdd835; color: #333; }
-.sculptures  { background-color: #7e57c2; }
-
-/* Hover Effects */
-#Categories button:hover {
-  transform: scale(1.07);
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
-  filter: brightness(0.95);
-}
-
-/* Optional Button Icons (If Used) */
-#Categories img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  #Categories button {
-    display: block;
-    width: 90%;
-    margin: 12px auto;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
+button:hover {
+  background-color: orange;
+  color: white;
 }
