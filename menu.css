@@ -1,35 +1,75 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff8f0;
-  color: #333;
   margin: 0;
-  padding: 50px 20px;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf5e6;
+  color: #333;
   text-align: center;
 }
 
 h1 {
-  color: #e65100;
+  margin-top: 20px;
   font-size: 2rem;
-  margin-bottom: 30px;
+  color: #5d4037;
+  animation: fadeDown 0.6s ease;
 }
 
-a {
-  text-decoration: none;
+/* Button Container */
+#Categories {
+  margin: 30px 0;
+  animation: fadeUp 0.6s ease;
 }
 
-button {
-  background-color: #ff7043;
-  color: white;
+/* Generic Button Style */
+#Categories button {
   border: none;
-  border-radius: 8px;
-  padding: 14px 30px;
-  font-size: 1rem;
-  margin: 12px;
+  padding: 14px 24px;
+  margin: 12px 10px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  font-weight: bold;
 }
 
-button:hover {
-  background-color: #e64a19;
-  transform: scale(1.05);
+/* Button Backgrounds (You can add more categories as needed) */
+#Categories .tops    { background-color: #ff7043; }
+#Categories .bottoms { background-color: #ab47bc; }
+#Categories .shoes   { background-color: #42a5f5; }
+#Categories .bags    { background-color: #26a69a; }
+#Categories .hats    { background-color: #ef5350; }
+#Categories .paintings { background-color: #fbc02d; }
+#Categories .sculptures { background-color: #7e57c2; }
+
+/* Hover Effect: Scale + Shadow + Show Text */
+#Categories button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional fade/slide-in animation */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #Categories button {
+    display: block;
+    width: 90%;
+    margin: 12px auto;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
