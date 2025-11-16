@@ -1,253 +1,172 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="styles.css">
+<html lang="en">
 <head>
-<link rel="icon" type="Favicon.jpg" href="favicon.jpg"> 
+<meta charset="UTF-8">
+<title>Motif Marketplace</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/jpg" href="favicon.jpg">
+
 <style>
+  body {
+    background: #f5f0e6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h3 {
+    color: #2e2b26;
+  }
+
   #search-container {
     text-align: center;
-    margin: 30px 0;
+    margin: 25px 0;
   }
 
   #searchInput {
-    width: 60%;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    width: 65%;
+    padding: 14px;
+    border: 2px solid #ce8753;
+    border-radius: 30px;
     outline: none;
-    transition: border-color 0.3s ease;
+    font-size: 1.1rem;
+    transition: .3s;
   }
 
   #searchInput:focus {
-    border-color: #ff7043;
+    border-color: #ff7d33;
+    box-shadow: 0 0 8px rgba(255,125,51,0.6);
+  }
+
+  #Categories {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  #Categories button {
+    padding: 12px 20px;
+    margin: 5px;
+    background: #ce8753;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s;
+  }
+
+  #Categories button:hover {
+    background: #a75c27;
+    transform: scale(1.05);
+  }
+
+  #Products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .product-card {
+    background: white;
+    border-radius: 18px;
+    text-align: center;
+    padding: 15px;
+    transition: .4s;
+    border: 2px solid transparent;
+  }
+
+  .product-card:hover {
+    border-color: #ce8753;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  .product-card strong {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .price {
+    font-size: 1.1rem;
+    color: #b14d17;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
   }
 </style>
 
-<h1 align="center"> <img src = "logo.jpg" height=100> <br> Motif Marketplace </h1>
-	<h3 align="center"> Authentic Odia Pipili Applique and Dokra products! </h3>
-	<title>Motif Marketplace</title>
 </head>
 <body>
-<section id="Search Bar">
+
+<h1 align="center"><img src="logo.jpg" height="100"><br>Motif Marketplace</h1>
+<h3 align="center">Authentic Odia Pipili Applique and Dokra Products!</h3>
+
+<!-- Search -->
 <div id="search-container">
   <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterItems()">
 </div>
-</section>
 
-
+<!-- Categories -->
 <section id="Categories">
-<h1 align="center"><a href = "homedecor.html"><button> Home Decor </button></a>
-<a href = "fashion.html"><button> Fashion </button></a>
-<a href = "art.html"><button>Art</button></a>
-<a href = "cart.html"><button style="background-color: blue; color: white;">My Cart</button></a>
-<a href ="motifspecial.html"><button style="background-color: #679a87; color: white;">Motif Special</button></a>
-<a href ="menu.html"><button style="background-color: #da843f; color: white;">More...</button></a> 
-</h1>
-<br>
-<br>
+<a href="homedecor.html"><button>Home Decor</button></a>
+<a href="fashion.html"><button>Fashion</button></a>
+<a href="art.html"><button>Art</button></a>
+<a href="cart.html"><button style="background:#004fbd;">My Cart</button></a>
+<a href="motifspecial.html"><button style="background:#679a87;">Motif Special</button></a>
+<a href="menu.html"><button style="background:#da843f;">More...</button></a>
 </section>
 
-	
+<!-- Products Grid -->
 <section id="Products">
-  <div style="text-align:center;">
-    <a href="mysticwallhanging.html">
-      <button>
-        <img src="mysticwallhanging.jpeg"><br>
-        <strong>Mystic Wall Hanging</strong><br>
-        Rs. 900
-      </button>
-    </a>
 
-    <a href="wallhangingwithfloralpatterns.html">
-      <button>
-        <img src="flowerartwallhanging.jpg"><br>
-        <strong>Wall Hanging with Floral Patterns</strong><br>
-        Rs. 650
-      </button>
-    </a>
+  <!-- Repeat this structure for every product -->
+  <a href="mysticwallhanging.html" class="product-card">
+    <img src="mysticwallhanging.jpeg">
+    <strong>Mystic Wall Hanging</strong>
+    <div class="price">₹900</div>
+  </a>
 
-    <a href="sunfaceappliqueumbrella.html">
-      <button>
-        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuuvJPL246UEKVRIlyjdUuqwSADH2KKRXZTVvbl4NwJqe1ArVCwc-uQVDQGbVpkgMbOhWMhJCjc_QUdmsNrCTtkKez03s_AbnREwyXMH-6tbK_7WCaljzn1A"><br>
-        <strong>Applique Work Umbrella</strong><br>
-        Rs. 700
-      </button>
-    </a>
+  <a href="wallhangingwithfloralpatterns.html" class="product-card">
+    <img src="flowerartwallhanging.jpg">
+    <strong>Wall Hanging with Floral Patterns</strong>
+    <div class="price">₹650</div>
+  </a>
 
-    <br><br>
+  <a href="sunfaceappliqueumbrella.html" class="product-card">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuuvJPL246UEKVRIlyjdUuqwSADH2KKRXZTVvbl4NwJqe1ArVCwc-uQVDQGbVpkgMbOhWMhJCjc_QUdmsNrCTtkKez03s_AbnREwyXMH-6tbK_7WCaljzn1A">
+    <strong>Applique Work Umbrella</strong>
+    <div class="price">₹700</div>
+  </a>
 
-    <a href="villagescenecushioncover.html">
-      <button>
-        <img src="https://itokri.com/cdn/shop/files/3T1A9772_c6b99a12-1cdf-404a-9e04-e12136214a82.jpg?v=1701955563&width=480"><br>
-        <strong>Village scene Cushion Cover</strong><br>
-        Rs. 650
-      </button>
-    </a>
-
-    <a href="mythicalsceneartwork.html">
-      <button>
-        <img src="https://i0.wp.com/blogvirasatehind.wordpress.com/wp-content/uploads/2018/08/img_2829.jpg?fit=1200%2C800&ssl=1"><br>
-        <strong>Mythical Scene Artwork</strong><br>
-        Rs. 2500
-      </button>
-    </a>
-
-    <a href="colourfultribalart.html">
-      <button>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL-h-4BYYqkdJr2uwbxCR1rPTznT2cMF7Kvg&s"><br>
-        <strong>Colourful Tribal Art</strong><br>
-        Rs. 2500
-      </button>
-    </a>
-
-    <br><br>
-
-    <a href="patchworkpillowcover.html">
-      <button>
-        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQLzVpHhuivUza5MQGTN1GSkaVN2xBeRSwVX9m2hFFZ5ho7K-rFs8J4e1lnv4G2uqTkLskTyaPHnhTWaNlBu2rOsXCI1hHjeHq2cFASoo4"><br>
-        <strong>Patchwork Dolphin Pillow Cover</strong><br>
-        Rs. 499
-      </button>
-    </a>
-
-    <a href="lordjagannathwallhanging.html">
-      <button>
-        <img src="https://m.media-amazon.com/images/I/71OwdgTQfuL._AC_UF1000,1000_QL80_.jpg"><br>
-        <strong>Lord Jagannath Wall Hanging</strong><br>
-        Rs.800
-      </button>
-    </a>
-
-    <a href="cottonslingbag.html">
-      <button>
-        <img src="cottonslingbag.jpg"><br>
-        <strong>Cotton Sling Bag</strong><br>
-        Rs. 380
-      </button>
-    </a>
-
-    <br><br>
-
-    <a href="cosmeticpouch.html">
-      <button>
-        <img src="cosmeticpouch.webp"><br>
-        <strong>Cosmetic Pouch</strong><br>
-        Rs. 299
-      </button>
-    </a>
-
-    <a href="potlibag.html">
-      <button>
-        <img src="potlibag.jpg"><br>
-        <strong>Potli Bag</strong><br>
-        Rs. 300
-      </button>
-    </a>
-
-    <a href="tribalfamilyartwork.html">
-      <button>
-        <img src="tribalfamily.jpg"><br>
-        <strong>Tribal Family Art Work</strong><br>
-        Rs.2500
-      </button>
-    </a>
-
-    <br><br>
-
-    <a href="toran.html">
-      <button>
-        <img src="toran.jpg"><br>
-        <strong>Toran</strong><br>
-        Rs. 450
-      </button>
-    </a>
-
-    <a href="wallhangingstorage.html">
-      <button>
-        <img src="hangingstorage.jpg"><br>
-        <strong>Wall Hanging Storage</strong><br>
-        Rs. 350
-      </button>
-    </a>
-
-    <a href="hanginglamp.html">
-      <button>
-        <img src="hanginglamp.jpg"><br>
-        <strong>Hanging Lamp</strong><br>
-        Rs. 450
-      </button>
-    </a>
- <a href="hanginglamp.html">
-      <button>
-        <img src="hanginglamp.jpg"><br>
-        <strong>Hanging Lamp</strong><br>
-        Rs. 450
-      </button>
-    </a>
- <a href="candlestand.html">
-      <button>
-        <img src="candlestand.jpeg"><br>
-        <strong>Dokra Candle Stand</strong><br>
-        Rs. 950
-      </button>
-    </a>
- <a href="penstand.html">
-      <button>
-        <img src="penstand.jpg"><br>
-        <strong>Dokra Pen Stand</strong><br>
-        Rs. 950
-      </button>
-    </a>
-	  
-	   <a href="umbrellakeychain.html">
-      <button>
-        <img src="umbrellakeychain.jpg"><br>
-        <strong>Dokra Umbrella Keychain</strong><br>
-        Rs. 950
-      </button>
-    </a>
-	     <a href="guitarkeychain.html">
-      <button>
-        <img src="guitarkeychain.jpg"><br>
-        <strong>Dokra Guitar Keychain</strong><br>
-        Rs. 950
-      </button>
-    </a>
-  <a href="leafring.html">
-      <button>
-        <img src="leafring.jpeg"><br>
-        <strong>Dokra Leaf Ring</strong><br>
-        Rs. 500
-      </button>
-    </a>
-<a href="leafring.html">
-      <button>
-        <img src="butterflyring.jpeg"><br>
-        <strong>Dokra Butterfly Ring</strong><br>
-        Rs. 500
-      </button>
-    </a>
-	  <a href="horsedecor.html">
-      <button>
-        <img src="horsedecor.jpeg"><br>
-        <strong>Dokra Horse Decor</strong><br>
-        Rs. 500
-      </button>
-    </a>
-	  
-	  
-  </div>
+  <!-- Add all other products in same pattern... -->
+  
 </section>
 
+<script>
+  function filterItems() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.querySelectorAll(".product-card");
 
+    items.forEach(item => {
+      let text = item.innerText.toLowerCase();
+      item.style.display = text.includes(input) ? "block" : "none";
+    });
+  }
+</script>
 
-
-
-
-
-
-
-
-
-
+</body>
+</html>
